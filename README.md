@@ -158,7 +158,7 @@ some very clear order the the ratios (note that we are plotting the harmonic mea
 ratio pairs here):
 
 <p align="center">
-  <img src="data/mp_ratio_hm.png" alt="Midpack ratios" style="width: 75%;">
+  <img src="data/mp_ratio_hm.png" alt="Midpack ratios" style="width: 100%;">
 </p>
 
 We can see the regularly repeated cycle of 6 records in the up and down jumps in the
@@ -166,7 +166,7 @@ solution set.  But in addition, the local minima and maxima within each cycle ap
 trace out three distinct curves, depicted here:
 
 <p align="center">
-  <img src="data/mp_curves_hm.png" alt="Midpack ratio curves" style="width: 75%;">
+  <img src="data/mp_curves_hm.png" alt="Midpack ratio curves" style="width: 100%;">
 </p>
 
 As a point of interest, it should be noted that the bottom two curves are asymptotically
@@ -178,11 +178,11 @@ of the lowest extremity ratio pair, we can plot the actual differences (overlaid
 other), as well as the delta between the two:
 
 <p align="center">
-  <img src="data/mp_diff.png" alt="Midpack diffs" style="width: 75%;">
+  <img src="data/mp_diff.png" alt="Midpack diffs" style="width: 100%;">
 </p>
 
 <p align="center">
-  <img src="data/mp_delta.png" alt="Midpack delta from extremity solution" style="width: 75%;">
+  <img src="data/mp_delta.png" alt="Midpack delta from extremity solution" style="width: 100%;">
 </p>
 
 The deltas appear to follow a very orderly sequence.  The larger shape of the curve is
