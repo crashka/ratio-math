@@ -40,7 +40,7 @@ Answer (or at least my answer): I have no idea.
 
 Since I can't do it the elegant way, I turn to Python.  See the `closest_ratios.py` script.
 
-This approach yields the following pair of closest ratios: `1/151` and `1/152`, with a
+This approach yields the following pair of closest ratios: `1/152` and `1/151`, with a
 difference of just `0.00004357`.  There are a few interesting things about this result:
 
 - This is located at what I will call one of the "extremities" of the domain space, or
@@ -140,26 +140,26 @@ $ python -m closest_ratios 200 midpack trace
 200: (67, 200), (66, 197), 0.000025380711, True
 ```
 
-Some interesting pattern emerge.  There appear to be repeating groups of 6 records with
+Some interesting patterns emerge.  There appear to be repeating groups of 6 records with
 the following properties:
 
 - For 5 out of the 6 records in the cycle, one of the ratios contains `max_denom` as the
   denominator
   - Starting with `max_denom ≡ 1 (mod 6)`, the ratio within the pair (either the first or
     the second) with the maximum denominator is: 2, 1, 2, 2, 2
-  - See records for `max_denom` of 7 through 11, for example
+  - See records above for `max_denom` of 7 through 11 (for example)
 - The record in the cycle that does *not* contain `max_denom` as a denominator is
   `max_denom ≡ 0 (mod 6)`
   - In these cases, the closest ratios are a repeat of the previous record (described by
-    `max_denom ≡ 5 (mod 6)`), and the second (larger) ratio contains `max_denom-1` as the
-    denominator
-  - See records for `max_denom` of 12, 18, 24 on the low end, or 186, 192, 198 higher up,
-    for examples
+    `max_denom ≡ 5 (mod 6)`), and the second (i.e. the larger) ratio is the one that
+    contains `max_denom-1` as the denominator
+  - See records above for `max_denom` of 12, 18, and 24 (or 186, 192, and 198 at the high
+    end of the samples computed)
 
 By visual inspection of the numbers, it's hard to tell exactly what the patterns are in
 terms of the actual closest ratio values themselves.  But if we graph them out, we see
-some very clear order the the ratios (note that we are plotting the harmonic mean of the
-ratio pairs here):
+some very clear order in the progression of ratios (noting that we are plotting the
+harmonic mean of the ratio pairs here):
 
 <p align="center">
   <img src="data/mp_ratio_hm.png" alt="Midpack ratios" style="width: 100%;">
