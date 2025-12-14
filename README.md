@@ -4,11 +4,11 @@
 
 ### High-Level Question
 
-**Gven a maximum denominator value, what is the smallest possible numerical difference
-between two non-identical ratios between 0 and 1?**  We are assuming only integer
+**Given a maximum denominator value, what is the smallest possible numerical difference
+between any two non-identical ratios between 0 and 1?**  We are assuming only integer
 numerators and denominators (where the numerator is smaller than the denominator).
 
-### A Little Background
+### Some Context
 
 This question was motivated by the need to know the precision required to represent
 certain statistics in an application implementing leaderboards and analysis reports for a
@@ -31,7 +31,7 @@ calculator (*a what?*)  I can easily find an example of this: the difference bet
 first thought.
 
 Question: so then, **what is a rigorous mathematical approach to figuring out how to find
-the smallest gap between two constructible ratios with demoninators not greater than
+the smallest gap between two constructible ratios with denominators not greater than
 152?**
 
 Answer (or at least my answer): I have no idea.
@@ -47,7 +47,7 @@ difference of just `0.00004357`.  There are a few interesting things about this 
   `1/max_denom` (the smallest possible ratio).  The other extremity involves the highest
   possible ratio (`(max_denom-1)/max_denom`), which (unsurprisingly) yields the same
   difference with its paired neighbor ratio (obtained by subtracting one from both the
-  numerator and demoninator).
+  numerator and denominator).
 - The distance between these two ratios at the extremity is quite a bit smaller than the
   example pair I stumbled upon using my calculator above—it is, in fact, 151 times smaller
   than `1/152`.  Not *approximately* 151 times smaller, but ***exactly*** 151 times
@@ -68,7 +68,7 @@ So, a restatement of the previous question could be: **will the closest ratio pa
 would clearly answer the question, but even if we are not able to find one using brute
 force (and I have run the script out past `max_denom = 9900`), can we prove that a "middle
 of the pack" solution is possible for some maximum denominator value?  Even if
-*theoretically* possible, does that mean the solution necessarily exists (I don't know
+*theoretically* possible, does that mean the solution necessarily exists (I don't know if
 that is a valid mathematical question—perhaps not).
 
 To help us address some of these questions, we do a little bit of algebra to confirm that
@@ -84,7 +84,7 @@ halves of the domain.
 
 We make a tweak to the script to allow us to exclude the ratios at the extremities from
 consideration, to see how close ratios from the middle of the pack can get (even if not
-the absolute closest), and whether a discernable pattern will emerge for *where* the
+the absolute closest), and whether a discernible pattern will emerge for *where* the
 closest midpack ratios turn out to be in the domain space.  The midpack solution for our
 `max_denom = 152` case is revealed to be the ratio pair of `51/152` and `50/149`,
 with a difference of `0.00004415`.  This is pretty darn close to the best extremity case
